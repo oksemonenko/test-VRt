@@ -1,6 +1,6 @@
 .actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-right: 6px;
   //margin-left: 42px;
   padding-top: 20px;
@@ -11,19 +11,17 @@
   list-style: none;
 
   &--top {
+    justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
   }
 }
 
-.actions__item {
-  width: 66px;
-}
-
 .actions__item-link {
   position: relative;
   display: block;
-  padding-left: 14px;
+  padding-left: 18px;
+  padding-right: 24px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
@@ -37,10 +35,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -7px;
-    width: 18px;
-    height: 19px;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -49,11 +47,19 @@
     &::before {
       background-image: url("../img/icons/plus-icon.svg");
     }
+
+    &:hover::before {
+      background-image: url("../img/icons/plus-icon-dark.svg");
+    }
   }
 
   &--export {
     &::before {
       background-image: url("../img/icons/export-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/export-icon-dark.svg");
     }
   }
 
@@ -61,15 +67,39 @@
     &::before {
       background-image: url("../img/icons/import-icon.svg");
     }
-  }
 
+    &:hover::before {
+      background-image: url("../img/icons/import-icon-dark.svg");
+    }
+  }
 
   &--search {
     text-indent: -9999px;
     &::before {
-      top: -2px;
-      left: 66px;
+      left: 25px;
       background-image: url("../img/icons/search-icon.svg");
+    }
+  }
+
+  &--group {
+    &::before {
+      background-image: url("../img/icons/group-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/group-icon-dark.svg");
+    }
+  }
+
+  &--example {
+    margin-right: 8px;
+
+    &::before {
+      background-image: url("../img/icons/plus-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/plus-icon-dark.svg");
     }
   }
 }
