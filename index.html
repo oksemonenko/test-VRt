@@ -11,17 +11,17 @@
     <h2 class="page-header__title">Change</h2>
     <div class="user-block">
       <div class="user-block__login">
-        <a href="#">Mr. Spree</a>
+        <a class="user-block__login-link" href="#">Mr. Spree</a>
       </div>
       <div class="user-block__logout">
-        <a href="#">No exit</a>
+        <a class="user-block__logout-link" href="#">No exit</a>
       </div>
     </div>
   </header>
   <nav class="main-nav">
     <ul class="main-nav__list">
       <li class="main-nav__item">
-        <a href="#">All city</a>
+        <a class="main-nav__item-link" href="#">All city</a>
         <ul class="sub-menu">
           <li class="sub-menu__item">
             <a class="sub-menu__link">Волгоград</a>
@@ -75,60 +75,77 @@
   <main>
     <section class="control-panel">
       <header class="control-panel__header">
-        <div class="control-panel__btn">
-          <a href="#">Auto</a>
-        </div>
-        <ul class="actions">
+        <a class="control-panel__btn  control-panel__btn--auto" href="#">Auto</a>
+        <ul class="actions  actions--top">
           <li class="actions__item">
-            <a href="#">Add</a>
+            <a class="actions__item-link  actions__item-link--add" href="#">Add</a>
           </li>
           <li class="actions__item">
-            <a href="#">Export</a>
+            <a class="actions__item-link  actions__item-link--export" href="#">Export</a>
           </li>
           <li class="actions__item">
-            <a href="#">Import</a>
+            <a class="actions__item-link  actions__item-link--import" href="#">Import</a>
           </li>
           <li class="actions__item">
-            <a href="#">Search</a>
+            <a class="actions__item-link  actions__item-link--search" href="#">Search</a>
           </li>
         </ul>
-        <div class="control-panel__btn  control-panel__btn--active">
-          <a href="#">Eyes</a>
-        </div>
+        <a class="control-panel__btn  control-panel__btn--eyes  control-panel__btn--eyes-active" href="#">Eyes</a>
       </header>
-      <ul class="items-list">
-        <li class="items-list__item">
-          <input type="checkbox" name ="item-1" id="item-1">
-          <label for="item-1">A Guide To Mri Scans</label>
-          <ul>
-            <li>Les Houches</li>
-            <li>Myspace Profile</li>
-            <li>Charmonix</li>
-            <li>Gem Of The</li>
-            <li class="items-list__item">
-              <input type="checkbox" name ="sub-item-1" id="sub-item-1">
-              <label for="sub-item-1">Valley</label>
-              <ul>
-                <li>Compatible</li>
-                <li>Inkjet</li>
-                <li>Cartridge</li>
-                <li>Compatible</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="actions">
-        <li class="actions__item">
-          <a href="#">Add example</a>
-        </li>
-        <li class="actions__item">
-          <a href="#">New group</a>
-        </li>
-        <li class="actions__item">
-          <a href="#">Import</a>
-        </li>
-      </ul>
+      <!--<ul class="items-list">-->
+        <!--<li class="items-list__item  accordion">A Guide To Mri Scans-->
+          <!--&lt;!&ndash;<input type="checkbox" name ="item-1" id="item-1">&ndash;&gt;-->
+          <!--&lt;!&ndash;<label for="item-1">A Guide To Mri Scans</label>&ndash;&gt;-->
+          <!--<ul class="accordion__sub">-->
+            <!--<li>Les Houches</li>-->
+            <!--<li>Myspace Profile</li>-->
+            <!--<li>Charmonix</li>-->
+            <!--<li>Gem Of The</li>-->
+            <!--<li class="items-list__item  accordion">Valley-->
+              <!--&lt;!&ndash;<input type="checkbox" name ="sub-item-1" id="sub-item-1">&ndash;&gt;-->
+              <!--&lt;!&ndash;<label for="sub-item-1">Valley</label>&ndash;&gt;-->
+              <!--<ul class="accordion__sub">-->
+                <!--<li>Compatible</li>-->
+                <!--<li>Inkjet</li>-->
+                <!--<li>Cartridge</li>-->
+                <!--<li>Compatible</li>-->
+              <!--</ul>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <div class="accordion">
+        <div class="accordion__item">A Guide To Mri Scans</div>
+          <!--<input type="checkbox" name ="item-1" id="item-1">-->
+          <!--<label for="item-1">A Guide To Mri Scans</label>-->
+          <div class="accordion__sub">
+            <div class="accordion__sub-item">Les Houches</div>
+            <div class="accordion__sub-item">Myspace Profile</div>
+            <div class="accordion__sub-item">Charmonix</div>
+            <div class="accordion__sub-item">Gem Of The</div>
+            <div class="accordion__sub-item  accordion__item  accordion__item--1">Valley</div>
+              <!--<input type="checkbox" name ="sub-item-1" id="sub-item-1">-->
+              <!--<label for="sub-item-1">Valley</label>-->
+            <div class="accordion__sub  accordion__sub--1">
+              <div class="accordion__sub-item">Compatible</div>
+              <div class="accordion__sub-item">Inkjet</div>
+              <div class="accordion__sub-item">Cartridge</div>
+              <div class="accordion__sub-item">Compatible</div>
+            </div>
+            <ul class="actions">
+              <li class="actions__item">
+                <a href="#">Add example</a>
+              </li>
+              <li class="actions__item">
+                <a href="#">New group</a>
+              </li>
+              <li class="actions__item">
+                <a href="#">Import</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+
       <div class="additional-info">
         <h2 class="additional-info__title">Travel Prudently</h2>
         <button class="additional-info__close-btn">Close</button>
@@ -150,5 +167,6 @@
       </div>
     </section>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
