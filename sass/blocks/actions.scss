@@ -1,9 +1,75 @@
 .actions {
   display: flex;
   justify-content: space-between;
+  margin-right: 6px;
+  //margin-left: 42px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  //border-top: 2px solid $color-gray;
+  font-size: 12px;
+  line-height: 16px;
   list-style: none;
+
+  &--top {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .actions__item {
-  width: 55px;
+  width: 66px;
+}
+
+.actions__item-link {
+  position: relative;
+  display: block;
+  padding-left: 14px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  color: $color-blue;
+
+  &:hover {
+    color: $color-dark-blue;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -7px;
+    width: 18px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &--add {
+    &::before {
+      background-image: url("../img/icons/plus-icon.svg");
+    }
+  }
+
+  &--export {
+    &::before {
+      background-image: url("../img/icons/export-icon.svg");
+    }
+  }
+
+  &--import {
+    &::before {
+      background-image: url("../img/icons/import-icon.svg");
+    }
+  }
+
+
+  &--search {
+    text-indent: -9999px;
+    &::before {
+      top: -2px;
+      left: 66px;
+      background-image: url("../img/icons/search-icon.svg");
+    }
+  }
 }

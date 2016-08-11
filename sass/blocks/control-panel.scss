@@ -1,5 +1,7 @@
 .control-panel {
   width: 500px;
+  //padding-top: 12px;
+  //padding-left: 15px;
   background-color: $color-white;
   box-shadow: 0 3px 7px 0 rgba(82, 96, 255, 0.5);
 }
@@ -7,10 +9,98 @@
 .control-panel__header {
   display: flex;
   justify-content: space-between;
+
+  //padding-bottom: 12px;
+
 }
 
 .control-panel__btn {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: $color-dark-blue;
+  box-sizing: border-box;
+
+  &:hover {
+    color: $color-blue;
+  }
+
   &--active {
-    background-color: rgba(81, 97, 255, 0.3);;
+    color: $color-blue;
+    background-color: rgba(81, 97, 255, 0.3);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 18px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--auto {
+    width: 92px;
+    margin-right: 7px;
+
+    &::before {
+      background-image: url("../img/icons/truck-icon-dark.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/truck-icon.svg");
+    }
+  }
+
+  &--auto-active {
+    color: $color-blue;
+    background-color: rgba(81, 97, 255, 0.3);
+
+    &::before {
+      background-image: url("../img/icons/truck-icon.svg");
+    }
+  }
+
+  &--eyes {
+    width: 124px;
+
+    &::before {
+      background-image: url("../img/icons/eye-icon-dark.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/eye-icon.svg");
+    }
+  }
+
+  &--eyes-active {
+    color: $color-blue;
+    background-color: rgba(81, 97, 255, 0.3);
+
+    &::before {
+      background-image: url("../img/icons/eye-icon.svg");
+    }
   }
 }
+
+//.control-panel__btn-link--auto svg {
+//  margin-right: 2px;
+//  transform: translate(0, 5px);
+//}
+//
+//.control-panel__btn-link--auto svg rect,
+//.control-panel__btn-link--auto svg polygon {
+//  fill: $color-dark-blue;
+//}
+
+//.control-panel__btn-link--auto svg g {
+//  fill: $color-dark-blue;
+//}
