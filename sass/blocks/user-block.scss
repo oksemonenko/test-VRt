@@ -1,0 +1,30 @@
+.user-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-block__login {
+  padding-right: 19px;
+}
+
+.user-block__logout {
+  width: 86px;
+  padding-left: 36px;
+  border-left: 2px solid $color-gray;
+}
+
+.user-block__login-link,
+.user-block__logout-link {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.user-block__login-link {
+  color: $color-dark-blue;
+}
+
+.user-block__logout-link {
+  color: $color-blue;
+}

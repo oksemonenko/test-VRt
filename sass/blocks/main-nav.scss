@@ -1,5 +1,26 @@
 .main-nav {
   margin-bottom: 6px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 17px;
   background-color: $color-white;
   box-shadow: 0 3px 7px 0 rgba(81, 97, 255, 0.3);
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__item-link {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  color: $color-blue;
+
+  &:hover {
+    color: $color-dark-blue;
+  }
 }
