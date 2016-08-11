@@ -1,0 +1,102 @@
+.additional-info {
+  position: absolute;
+  top: 48px;
+  left: 508px;
+  width: 280px;
+  padding-left: 15px;
+  padding-right: 12px;
+  background-color: $color-white;
+  box-shadow: 0 3px 7px 0 rgba(81, 97, 255, 0.5);
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 83px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 8px solid $color-white;
+    border-bottom: 10px solid transparent;
+  }
+}
+
+.additional-info__header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 16px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    width: 280px;
+    height: 7px;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    background-image: linear-gradient(to bottom, rgba(138, 154, 255, 0), rgba(81, 97, 255, 0.3));
+  }
+}
+
+.additional-info__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-dark-blue;
+}
+
+.additional-info__close-btn {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  background-image: url("../img/icons/plus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.additional-info__note {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 80px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-dark-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icons/time-icon-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.additional-info__text {
+  padding-left: 15px;
+  border-left: 1px solid $color-gray;
+}
+
+.additional-info__text-item {
+  margin-bottom: 19px;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-dark-blue;
+  opacity: 0.5;
+}
+
+.additional-info__text .additional-info__text-item:last-child {
+  margin-bottom: 0;
+}

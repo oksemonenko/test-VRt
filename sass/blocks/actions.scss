@@ -102,4 +102,26 @@
       background-image: url("../img/icons/plus-icon-dark.svg");
     }
   }
+
+  &--rename {
+    &::before {
+      background-image: url("../img/icons/edit-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/edit-icon-dark.svg");
+    }
+  }
+
+  &--delete {
+    color: $color-orange;
+
+    &::before {
+      background-image: url("../img/icons/delete-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/delete-icon-dark.svg");
+    }
+  }
 }
