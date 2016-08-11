@@ -7,6 +7,7 @@
 }
 
 .accordion__group {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
@@ -16,14 +17,47 @@
   cursor: pointer;
   box-sizing: border-box;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid $color-gray;
+    border-bottom: 1px solid $color-gray;
+    transform: rotate(-130deg) skew(10deg);
+  }
+
   &:hover {
     background-color: $color-gray;
+
+    &::after {
+      border-left: 1px solid $color-dark-blue;
+      border-bottom: 1px solid $color-dark-blue;
+    }
   }
 
   &--active {
     background-color: $color-gray;
     border-bottom: 2px solid $color-gray;
+
+    &::after {
+      border-left: 1px solid $color-blue;
+      border-bottom: 1px solid $color-blue;
+      transform: rotate(-40deg) skew(10deg);
+    }
+
+    &:hover {
+
+      &::after {
+        border-left: 1px solid $color-blue;
+        border-bottom: 1px solid $color-blue;
+      }
+    }
   }
+
+
 }
 
 .accordion__sub {
@@ -46,6 +80,7 @@
 
 .accordion__sub-item {
   position: relative;
+  display: flex;
   margin-left: 11px;
   padding-left: 24px;
   font-size: 12px;
@@ -70,6 +105,7 @@
 }
 
 .accordion__sub-group {
+  position: relative;
   margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -79,5 +115,20 @@
     left: 17px;
     background-image: url("../img/icons/group-icon-dark.svg");
   }
+
+  &::after {
+    top: 8px;
+    left: 5px;
+    border-left: 1px solid $color-dark-blue;
+    border-bottom: 1px solid $color-dark-blue;
+  }
 }
 
+.accordion__sub-item-name {
+  width: 85px;
+  margin-right: 28px;
+}
+
+.accordion__sub-item-time {
+  margin-right: 10px;
+}

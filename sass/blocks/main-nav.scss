@@ -12,6 +12,7 @@
 }
 
 .main-nav__item-link {
+  position: relative;
   padding-top: 11px;
   padding-bottom: 11px;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -22,5 +23,22 @@
 
   &:hover {
     color: $color-dark-blue;
+
+    &::after {
+      border-left: 1px solid $color-dark-blue;
+      border-bottom: 1px solid $color-dark-blue;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 45px;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid $color-blue;
+    border-bottom: 1px solid $color-blue;
+    transform: rotate(-40deg) skew(10deg);
   }
 }
