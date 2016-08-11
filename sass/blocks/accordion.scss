@@ -17,7 +17,7 @@
   cursor: pointer;
   box-sizing: border-box;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 17px;
@@ -32,7 +32,7 @@
   &:hover {
     background-color: $color-gray;
 
-    &::after {
+    &::before {
       border-left: 1px solid $color-dark-blue;
       border-bottom: 1px solid $color-dark-blue;
     }
@@ -42,7 +42,7 @@
     background-color: $color-gray;
     border-bottom: 2px solid $color-gray;
 
-    &::after {
+    &::before {
       border-left: 1px solid $color-blue;
       border-bottom: 1px solid $color-blue;
       transform: rotate(-40deg) skew(10deg);
@@ -50,7 +50,7 @@
 
     &:hover {
 
-      &::after {
+      &::before {
         border-left: 1px solid $color-blue;
         border-bottom: 1px solid $color-blue;
       }
@@ -82,14 +82,63 @@
   position: relative;
   display: flex;
   margin-left: 11px;
-  padding-left: 24px;
+
   font-size: 12px;
   line-height: 24px;
   cursor: pointer;
 
   &:hover {
     background-color: $color-gray;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 11px;
+      width: 6px;
+      height: 6px;
+      border-left: 1px solid $color-blue;
+      border-bottom: 1px solid $color-blue;
+      transform: rotate(-130deg) skew(10deg);
+    }
   }
+}
+
+.accordion__sub-group {
+  position: relative;
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 37px;
+
+  &::before {
+    top: 8px;
+    left: 5px;
+    border-left: 1px solid $color-dark-blue;
+    border-bottom: 1px solid $color-dark-blue;
+  }
+}
+
+.accordion__sub-group-name {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 17px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icons/group-icon-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.accordion__sub-item-name {
+  position: relative;
+  width: 85px;
+  margin-right: 28px;
+  padding-left: 24px;
 
   &::before {
     content: "";
@@ -102,31 +151,6 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
-
-.accordion__sub-group {
-  position: relative;
-  margin-left: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 37px;
-
-  &::before {
-    left: 17px;
-    background-image: url("../img/icons/group-icon-dark.svg");
-  }
-
-  &::after {
-    top: 8px;
-    left: 5px;
-    border-left: 1px solid $color-dark-blue;
-    border-bottom: 1px solid $color-dark-blue;
-  }
-}
-
-.accordion__sub-item-name {
-  width: 85px;
-  margin-right: 28px;
 }
 
 .accordion__sub-item-time {
