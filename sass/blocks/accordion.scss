@@ -56,8 +56,6 @@
       }
     }
   }
-
-
 }
 
 .accordion__sub {
@@ -99,6 +97,33 @@
       height: 6px;
       border-left: 1px solid $color-blue;
       border-bottom: 1px solid $color-blue;
+      transform: rotate(-130deg) skew(10deg);
+    }
+  }
+
+  &--active {
+    background-color: $color-blue;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-blue;
+      color: $color-white;
+
+      &::after {
+        border-left: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 11px;
+      width: 6px;
+      height: 6px;
+      border-left: 1px solid $color-white;
+      border-bottom: 1px solid $color-white;
       transform: rotate(-130deg) skew(10deg);
     }
   }
@@ -150,6 +175,12 @@
     background-image: url("../img/icons/zone-icon-dark.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+.accordion__sub-item--active .accordion__sub-item-name {
+  &::before {
+    background-image: url("../img/icons/zone-icon-white.svg");
   }
 }
 

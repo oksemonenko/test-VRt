@@ -30,12 +30,12 @@
 		subMenu.classList.remove("sub-menu--show");
 	}
 
-	cityLink.addEventListener('click', function(evt) {
+	cityLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		showSubMenu();
 	});
 
-	overlay.addEventListener('click', function(evt) {
+	overlay.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		hideSubMenu();
 	});
@@ -51,4 +51,34 @@
 			this.nextElementSibling.classList.toggle("accordion__sub--show");
 		}
 	}
+
+
+	var accItems = document.querySelectorAll(".accordion__sub-item");
+	var additionalInfo = document.querySelector(".additional-info");
+	var closeBtn = additionalInfo.querySelector(".additional-info__close-btn");
+
+	function showAdditionalInfo () {
+		additionalInfo.classList.add("additional-info--show");
+	}
+
+	function hideAdditionalInfo () {
+		additionalInfo.classList.remove("additional-info--show");
+	}
+
+	Array.prototype.slice.call(accItems).forEach(function (accItem) {
+		accItem.addEventListener("click", function () {
+			if (additionalInfo.classList.contains("additional-info--show")) {
+				hideAdditionalInfo();
+			} else {
+				showAdditionalInfo();
+			}
+		});
+	});
+
+	closeBtn.addEventListener("click", hideAdditionalInfo);
+
+	// accItems.forEach(function (accItem) {
+	// 	accItem.addEventListener("click", showAdditionalInfo)
+	// })
+
 })();

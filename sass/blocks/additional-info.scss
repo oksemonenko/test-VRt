@@ -1,4 +1,5 @@
 .additional-info {
+  display: none;
   position: absolute;
   top: 48px;
   left: 508px;
@@ -19,6 +20,10 @@
     border-top: 10px solid transparent;
     border-right: 8px solid $color-white;
     border-bottom: 10px solid transparent;
+  }
+
+  &--show {
+    display: block;
   }
 }
 
