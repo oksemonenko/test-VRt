@@ -74,7 +74,9 @@
 
 	accItems.forEach(function (accItem) {
 		accItem.addEventListener("click", function () {
-			if (additionalInfo.classList.contains("additional-info--show")) {
+			if (accItem.classList.contains("accordion__group")) {
+				accItem.classList.toggle("accordion__group--active");
+			} else if (additionalInfo.classList.contains("additional-info--show")) {
 				hideAdditionalInfo();
 			} else {
 				additionalInfo.classList.add("additional-info--" + accItems.indexOf(accItem));
