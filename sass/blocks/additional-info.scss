@@ -1,5 +1,4 @@
 .additional-info {
-  //display: none;
   position: absolute;
   top: 12px;
   left: 508px;
@@ -26,7 +25,7 @@
   }
 
   &--show {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   @for $i from 1 through 7 {
