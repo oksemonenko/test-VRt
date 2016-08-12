@@ -63,13 +63,21 @@
 
 	function hideAdditionalInfo () {
 		additionalInfo.classList.remove("additional-info--show");
+		for (var n = 0; n < 8; n++) {
+			if (additionalInfo.classList.contains("additional-info--" + n)) {
+				additionalInfo.classList.remove("additional-info--" + n);
+			}
+		}
 	}
 
-	Array.prototype.slice.call(accItems).forEach(function (accItem) {
+	accItems = Array.prototype.slice.call(accItems);
+
+	accItems.forEach(function (accItem) {
 		accItem.addEventListener("click", function () {
 			if (additionalInfo.classList.contains("additional-info--show")) {
 				hideAdditionalInfo();
 			} else {
+				additionalInfo.classList.add("additional-info--" + accItems.indexOf(accItem));
 				showAdditionalInfo();
 			}
 		});

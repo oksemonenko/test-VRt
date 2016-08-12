@@ -1,7 +1,7 @@
 .additional-info {
   display: none;
   position: absolute;
-  top: 48px;
+  top: 12px;
   left: 508px;
   width: 280px;
   padding-left: 15px;
@@ -24,6 +24,12 @@
 
   &--show {
     display: block;
+  }
+
+  @for $i from 1 through 7 {
+    &--#{$i} {
+    top: 12px + 24px * $i;
+  }
   }
 }
 
