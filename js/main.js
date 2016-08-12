@@ -63,11 +63,6 @@
 
 	function hideAdditionalInfo () {
 		additionalInfo.classList.remove("additional-info--show");
-		for (var n = 0; n < 8; n++) {
-			if (additionalInfo.classList.contains("additional-info--" + n)) {
-				additionalInfo.classList.remove("additional-info--" + n);
-			}
-		}
 	}
 
 	accItems = Array.prototype.slice.call(accItems);
@@ -79,6 +74,11 @@
 			} else if (additionalInfo.classList.contains("additional-info--show")) {
 				hideAdditionalInfo();
 			} else {
+				for (var n = 0; n < 8; n++) {
+					if (additionalInfo.classList.contains("additional-info--" + n)) {
+						additionalInfo.classList.remove("additional-info--" + n);
+					}
+				}
 				additionalInfo.classList.add("additional-info--" + accItems.indexOf(accItem));
 				showAdditionalInfo();
 			}
@@ -86,9 +86,5 @@
 	});
 
 	closeBtn.addEventListener("click", hideAdditionalInfo);
-
-	// accItems.forEach(function (accItem) {
-	// 	accItem.addEventListener("click", showAdditionalInfo)
-	// })
 
 })();

@@ -1,9 +1,7 @@
 .control-panel {
-  position: relative;
+  position: absolute;
   width: 500px;
   height: 85vh;
-  //padding-top: 12px;
-  //padding-left: 15px;
   background-color: $color-white;
   box-shadow: 0 3px 7px 0 rgba(82, 96, 255, 0.5);
 }
@@ -11,9 +9,6 @@
 .control-panel__header {
   display: flex;
   justify-content: space-between;
-
-  //padding-bottom: 12px;
-
 }
 
 .control-panel__btn {
@@ -92,17 +87,3 @@
     }
   }
 }
-
-//.control-panel__btn-link--auto svg {
-//  margin-right: 2px;
-//  transform: translate(0, 5px);
-//}
-//
-//.control-panel__btn-link--auto svg rect,
-//.control-panel__btn-link--auto svg polygon {
-//  fill: $color-dark-blue;
-//}
-
-//.control-panel__btn-link--auto svg g {
-//  fill: $color-dark-blue;
-//}
