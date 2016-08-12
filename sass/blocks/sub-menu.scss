@@ -1,20 +1,21 @@
 .sub-menu {
-  display: none;
+  //display: none;
   position: absolute;
   top: 50px;
   left: 0;
   width: 200px;
   padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
   background-color: $color-white;
   list-style: none;
   box-sizing: border-box;
   z-index: 10;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 
   &--show {
-    display: block;
-    animation: sub-menu 0.6s;
+    height: 400px;
+    overflow: visible;
   }
 
   &::before {
@@ -32,6 +33,7 @@
 }
 
 .sub-menu__link {
+  display: block;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 12px;
@@ -44,25 +46,6 @@
   }
 }
 
-@keyframes sub-menu {
-  0% {
-    transform: translateY(-350px);
-    opacity: 0;
-  }
-  30%  {
-    transform: translateY(-300px);
-  }
-  50%  {
-    transform: translateY(-250px);
-  }
-  70%  {
-    transform: translateY(-200px);
-  }
-  90%  {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.sub-menu__item:first-child {
+  margin-top: 20px;
 }
-
