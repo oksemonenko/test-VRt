@@ -1,6 +1,6 @@
 .additional-info {
   position: absolute;
-  top: 12px;
+  top: 24px;
   left: 508px;
   width: 280px;
   padding-left: 15px;
@@ -28,9 +28,9 @@
     transform: translateX(0);
   }
 
-  @for $i from 1 through 7 {
+  @for $i from 1 through 8 {
     &--#{$i} {
-    top: 12px + 24px * $i;
+    top: 24px + 24px * $i;
   }
   }
 }

@@ -57,15 +57,20 @@
 	var additionalInfo = document.querySelector(".additional-info");
 	var closeBtn = additionalInfo.querySelector(".additional-info__close-btn");
 
+	accItems = Array.prototype.slice.call(accItems);
+
 	function showAdditionalInfo () {
 		additionalInfo.classList.add("additional-info--show");
 	}
 
 	function hideAdditionalInfo () {
 		additionalInfo.classList.remove("additional-info--show");
+		accItems.forEach(function (accItem) {
+			accItem.classList.remove("accordion__sub-item--active");
+		})
 	}
 
-	accItems = Array.prototype.slice.call(accItems);
+
 
 	accItems.forEach(function (accItem) {
 		accItem.addEventListener("click", function () {
@@ -80,6 +85,7 @@
 					}
 				}
 				additionalInfo.classList.add("additional-info--" + accItems.indexOf(accItem));
+				accItem.classList.add("accordion__sub-item--active");
 				showAdditionalInfo();
 			}
 		});
