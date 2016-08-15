@@ -1,4 +1,5 @@
 .accordion {
+  position: relative;
   border-top: 2px solid $color-gray;
   border-right: 3px solid $color-gray;
   border-left: 3px solid $color-gray;
@@ -13,7 +14,6 @@
   padding-left: 40px;
   padding-right: 6px;
   background-color: $color-white;
-  //border-bottom: 2px solid $color-gray;
   cursor: pointer;
   box-sizing: border-box;
 
@@ -59,20 +59,22 @@
 }
 
 .accordion__sub {
-  display: none;
-  margin-top: 13px;
+  max-height: 0;
   padding-left: 25px;
-  border-bottom: 2px solid $color-gray;
   list-style: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 
   &--show {
-    display: block;
+    max-height: 500px;
+    margin-top: 13px;
+    opacity: 1;
     background-color: $color-white;
   }
 
-  &--1 {
+  &--1.accordion__sub--show {
     margin-top: 5px;
-    padding-bottom: 13px;
   }
 }
 
@@ -80,7 +82,6 @@
   position: relative;
   display: flex;
   margin-left: 11px;
-
   font-size: 12px;
   line-height: 24px;
   cursor: pointer;
