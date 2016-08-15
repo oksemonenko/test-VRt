@@ -1,25 +1,12 @@
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-//
-// for (i = 0; i < acc.length; i++) {
-// 	acc[i].onclick = function(){
-// 		this.classList.toggle("accordion--active");
-// 		// this.nextElementSibling.classList.toggle("show");
-// 		this.elementsToShow = Array.prototype.slice.call(this.children);
-// 		this.elementsToShow.forEach(function (elementToShow) {
-// 			elementToShow.classList.toggle("accordion__sub--show");
-// 		});
-// 		// this.children.classList.toggle("show");
-// 	}
-// }
-
 "use strict";
 
 (function () {
+//Подменю выбора города
 	var cityLink = document.getElementById("city-link");
 	var overlay = document.querySelector(".overlay");
 	var subMenu = document.querySelector(".sub-menu");
 
+	//Функции показа и скрытия подменю
 	function showSubMenu() {
 		overlay.classList.add("overlay--show");
 		subMenu.classList.add("sub-menu--show");
@@ -30,6 +17,7 @@
 		subMenu.classList.remove("sub-menu--show");
 	}
 
+	//Обработчики событий показа и закрытия подменю
 	cityLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		showSubMenu();
@@ -41,24 +29,27 @@
 	});
 
 
-
-	var acc = document.getElementsByClassName("accordion__group");
+//Аккордеон-меню
+	var accGroup = document.getElementsByClassName("accordion__group");
 	var i;
 
-	for (i = 0; i < acc.length; i++) {
-		acc[i].onclick = function(){
+	//Показывает и скрывает пункты аккордеон-меню по клику на аккордеон-группу
+	for (i = 0; i < accGroup.length; i++) {
+		accGroup[i].addEventListener("click", function(){
 			this.classList.toggle("accordion__group--active");
 			this.nextElementSibling.classList.toggle("accordion__sub--show");
-		}
+		})
 	}
 
 
+//Окошко дополнительной информации
 	var accItems = document.querySelectorAll(".accordion__sub-item");
 	var additionalInfo = document.querySelector(".additional-info");
 	var closeBtn = additionalInfo.querySelector(".additional-info__close-btn");
 
 	accItems = Array.prototype.slice.call(accItems);
 
+	//Функции показа и скрытия окошка дополнительной информации
 	function showAdditionalInfo () {
 		additionalInfo.classList.add("additional-info--show");
 	}
@@ -70,12 +61,11 @@
 		})
 	}
 
-
-
+	//Обработчики событий показа и скрытия окошка дополнительной информации
 	accItems.forEach(function (accItem) {
 		accItem.addEventListener("click", function () {
 			if (accItem.classList.contains("accordion__group")) {
-				accItem.classList.toggle("accordion__group--active");
+				hideAdditionalInfo();
 			} else if (additionalInfo.classList.contains("additional-info--show")) {
 				hideAdditionalInfo();
 			} else {
@@ -92,5 +82,4 @@
 	});
 
 	closeBtn.addEventListener("click", hideAdditionalInfo);
-
 })();
