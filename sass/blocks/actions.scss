@@ -2,10 +2,8 @@
   display: flex;
   justify-content: flex-start;
   margin-right: 6px;
-  //margin-left: 42px;
   padding-top: 20px;
   padding-bottom: 20px;
-  //border-top: 2px solid $color-gray;
   font-size: 12px;
   line-height: 16px;
   list-style: none;
@@ -14,6 +12,11 @@
     justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+
+  &--bottom {
+    margin-top: 13px;
+    border-top: 2px solid $color-gray;
   }
 }
 
@@ -78,6 +81,10 @@
     &::before {
       left: 25px;
       background-image: url("../img/icons/search-icon.svg");
+    }
+
+    &:hover::before {
+      background-image: url("../img/icons/search-icon-dark.svg");
     }
   }
 
