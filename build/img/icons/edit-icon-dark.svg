@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>E50FB460-BC30-40A8-BC73-8A23FB3D2EE5</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="2.04345703 10 4.12841797 10 10.0688477 4 8.06054688 2 2.04345703 8"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.02539062" height="8" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="veeroute_main_workspace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="test-front-end" transform="translate(-608.000000, -339.000000)">
+            <g id="edit_icon_14px" transform="translate(606.000000, 339.000000)">
+                <rect id="Rectangle-196" fill="#001d60" fill-rule="evenodd" x="2" y="11" width="10" height="1"></rect>
+                <use id="Path-96" stroke="#001d60" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <path d="M10.6715088,2.68151855 L9.35632324,1.3762207" id="Line" stroke="#001d60" stroke-width="1" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>05100771-6C09-42B2-85FA-DD8CD8742B7D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="7 10 8.8817842e-16 10 0 6 3 3 7 3"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="7" height="7" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="truck_18px">
+            <g id="Group" transform="translate(0.000000, 4.000000)">
+                <rect id="Rectangle-49" fill="#001d60" x="17" y="1" width="1" height="9"></rect>
+                <rect id="Rectangle-49" fill="#001d60" x="6" y="1" width="1" height="8.96679688"></rect>
+                <rect id="Rectangle-45" fill="#001d60" x="6" y="9" width="11" height="1"></rect>
+                <polygon id="Rectangle-45" fill="#001d60" points="6 0 18 0 18 1 15.4165483 1 6 1"></polygon>
+                <rect id="Rectangle-45" fill="#001d60" x="2" y="10" width="3" height="1"></rect>
+                <rect id="Rectangle-45" fill="#001d60" x="11" y="10" width="3" height="1"></rect>
+                <use id="Path-43" stroke="#001d60" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
